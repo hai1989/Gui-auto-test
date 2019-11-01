@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="chandao" verbose="4" junit="false" parallel="false" thread-count="5" skipfailedinvocationcounts="false"
+       data-provider-thread-count="2" >
+<!--
+    data-provider-thread-count 设置并行运行测试时用于数据提供程序的默认最大线程数。仅当选择了并行模式（例如，使用-parallel选项）时，此选项才会生效
+-->
+
+    <test name="示例测试" preserve-order="true">   <!--class按顺序执行-->
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <classes>
+
+            <class name="chandao.test.LoginTest">
+                <!--<methods>-->
+                    <!--<include name="testLogin"/>-->
+                <!--</methods>-->
+            </class>
+        </classes>
+
+    </test>
+    <listeners>
+        <!--<listener class-name="util.ExtentReporterNG"></listener>-->
+        <listener class-name="util.ExtentReporterNGNew" />
+        <listener class-name="common.TestNGListenerScreen"></listener>
+    </listeners>
+</suite>
