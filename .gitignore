@@ -4,6 +4,6 @@ target
 runDemo.sh
 src/test/resources/element/
 java
-reports/
-screen/
-logs/
+reports/*html
+screen/test_*
+logs/*html
