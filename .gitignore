@@ -3,7 +3,6 @@ target
 *.iml
 runDemo.sh
 src/test/resources/element/
-java
 reports/*html
 screen/test_*
 logs/*html
